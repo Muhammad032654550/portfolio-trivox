@@ -747,3 +747,64 @@ button,a{ -webkit-tap-highlight-color:transparent }
 .media-card img{color:transparent;font-size:0}
 @media(max-width:520px){.hero .term{font-size:.72rem;padding:.45rem .7rem;width:100%}}
 @media(prefers-reduced-motion:reduce){.hero .term .cur{animation:none}}
+
+/* =====================================================================
+   V8c: best mobile display
+   ===================================================================== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.mbar{display:none}
+@media(max-width:860px){
+  /* lighter, quicker reveals on phones */
+  .rv{transform:translateY(18px)!important;transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1)!important}
+  .rv.in{transform:none!important}
+  section{padding:3.6rem 0}
+  h2{letter-spacing:-.035em}
+  .sub{max-width:none}
+
+  /* sticky call / WhatsApp bar */
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:60;
+    padding:.45rem;border-radius:20px;background:rgba(14,6,34,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    border:1px solid rgba(196,181,253,.28);box-shadow:0 14px 40px rgba(0,0,0,.45);
+    transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .mbar.show{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;border-radius:14px;font-weight:700;font-size:.92rem;color:#fff;text-decoration:none}
+  .mbar .mb-call{background:linear-gradient(135deg,#8b5cf6,#6d28d9);box-shadow:0 8px 22px rgba(109,40,217,.45)}
+  .mbar .mb-wa{background:#1fb855;box-shadow:0 8px 22px rgba(31,184,85,.35)}
+  .mbar a:active{transform:scale(.97)}
+  .wa{display:none}
+  footer{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+
+  /* media cards: swipeable row */
+  .media-grid{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    margin-inline:-15px;padding:.2rem 15px .8rem;scrollbar-width:none}
+  .media-grid::-webkit-scrollbar{display:none}
+  .media-card,.media-card.media-wide{flex:0 0 82%;scroll-snap-align:center;min-height:300px;aspect-ratio:auto}
+
+  /* packages: most-chosen first, tighter cards */
+  .pk .pc.hot{order:-1}
+  .pc{padding:1.4rem}
+
+  /* why cards: calmer, smaller */
+  .wy{padding:1.15rem}
+  .wy h3{font-size:1.02rem}
+
+  /* team illustration: crop to the people instead of shrinking everything */
+  .studio{overflow:hidden}
+  .studio svg{width:175%;max-width:none;margin-left:-37%}
+
+  /* showreel keeps a phone-friendly ratio */
+  .reel canvas{aspect-ratio:960/500;height:auto;width:100%}
+
+  /* forms: big comfortable fields */
+  form input,form select,form textarea{min-height:50px;border-radius:14px}
+  .cta{padding:2.4rem 1rem}
+  .big{font-size:clamp(2.4rem,13vw,4rem)}
+}
+@media(max-width:520px){
+  .media-card,.media-card.media-wide{flex-basis:86%}
+  .stats .stat{padding:.9rem}
+  .stat b{font-size:1.7rem}
+  .faq summary{padding:1rem 2.6rem 1rem 1rem}
+  .fcta .acts{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.mbar{transition:none}.rv{transform:none!important}}

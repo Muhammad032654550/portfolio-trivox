@@ -374,3 +374,12 @@
     else if(dir<0&&k<=0){dir=1;ci=(ci+1)%cmds.length;wait=4}
   },55);
 })();
+
+/* mobile quick-contact bar: appears after the hero */
+(function(){
+  var b=document.getElementById('mbar'),hero=document.querySelector('.hero');
+  if(!b||!hero)return;
+  var t=0;function u(){t=0;var show=scrollY>hero.offsetHeight*.7;b.classList.toggle('show',show);
+    var ct=document.getElementById('contact');if(ct){var r=ct.getBoundingClientRect();if(r.top<innerHeight*.5&&r.bottom>0)b.classList.remove('show')}}
+  addEventListener('scroll',function(){if(!t){t=1;requestAnimationFrame(u)}},{passive:true});u();
+})();
