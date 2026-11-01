@@ -30,6 +30,7 @@
 <main id="top">
 <section class="hero" data-scene="#2a0f66,#09031a">
   <div class="hbg" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span><span class="hgrid"></span></div>
+  <canvas class="tech" id="tech" aria-hidden="true"></canvas><span class="scanline" aria-hidden="true"></span><span class="spot" aria-hidden="true"></span>
   <svg class="hero-circuit" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="circuitGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity="0"/><stop offset=".5" stop-color="#a78bfa" stop-opacity=".8"/><stop offset="1" stop-color="#67e8f9" stop-opacity=".1"/></linearGradient></defs><g fill="none" stroke="url(#circuitGlow)" stroke-width="1.3"><path d="M0 170H110L150 210H290L330 250H410"/><path d="M0 205H82L122 245H235"/><path d="M1440 170H1320L1270 220H1160L1115 265H1040"/><path d="M1440 210H1360L1325 245H1250"/><path d="M0 700H120L170 650H260L300 610H385"/><path d="M1440 680H1330L1280 630H1190L1140 580H1080"/><path d="M220 0V80L260 120V170M1220 0V95L1180 135V180M90 900V810L130 770V720M1350 900V800L1300 750V700"/></g><g fill="#c4b5fd"><circle cx="110" cy="170" r="3"/><circle cx="410" cy="250" r="3"/><circle cx="1320" cy="170" r="3"/><circle cx="1040" cy="265" r="3"/><circle cx="385" cy="610" r="3"/><circle cx="1080" cy="580" r="3"/></g></svg>
   <svg class="flw" viewBox="0 0 800 800" aria-hidden="true" id="flw"><defs>
     <linearGradient id="pb" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2e1065"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
@@ -40,6 +41,7 @@
   </defs>
   <path d="M400 820C405 700 392 600 400 480" fill="none" stroke="url(#st)" stroke-width="16" stroke-linecap="round"/>
   <path class="lf" d="M398 690C330 690 270 640 250 580C320 585 380 620 398 690Z" fill="#3b1a8a"/><path class="lf" d="M402 640C470 640 530 590 552 535C480 540 420 575 402 640Z" fill="#4c1d95"/>
+  <g class="orb2" aria-hidden="true"><circle class="rg1" cx="400" cy="440" r="318" fill="none" stroke="#67e8f9" stroke-opacity=".38" stroke-width="1.4" stroke-dasharray="3 14"/><circle class="rg2" cx="400" cy="440" r="362" fill="none" stroke="#a78bfa" stroke-opacity=".34" stroke-width="1.4" stroke-dasharray="40 18 6 18"/><g class="sat1"><circle cx="718" cy="440" r="6" fill="#67e8f9"/><circle cx="718" cy="440" r="14" fill="#67e8f9" opacity=".22"/></g><g class="sat2"><circle cx="400" cy="78" r="5" fill="#f0abfc"/><circle cx="400" cy="78" r="12" fill="#f0abfc" opacity=".22"/></g></g>
   <circle class="halo" cx="400" cy="440" r="260" fill="url(#gl)"/>
   <g transform="translate(400 478)"><path class="pt b" style="--r:-84deg;--d:0.2s;--s:0.92" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt b" style="--r:84deg;--d:0.25s;--s:0.92" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt b" style="--r:-52deg;--d:0.4s;--s:1.04" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt b" style="--r:52deg;--d:0.45s;--s:1.04" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt f" style="--r:-62deg;--d:0.7s;--s:0.9" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt f" style="--r:62deg;--d:0.75s;--s:0.9" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt f" style="--r:-30deg;--d:0.95s;--s:1" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt f" style="--r:30deg;--d:1.0s;--s:1" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/><path class="pt f" style="--r:0deg;--d:1.2s;--s:1.08" d="M0 0C-62 -46 -74 -160 0 -245C74 -160 62 -46 0 0Z"/>
     <g class="sta"><path d="M-22 -4L-34 -70M-8 -4L-12 -84M8 -4L14 -82M22 -4L36 -68" stroke="#f9a8d4" stroke-width="2.5" stroke-linecap="round"/><circle cx="-34" cy="-70" r="5" fill="#fff"/><circle cx="-12" cy="-84" r="5" fill="#fbcfe8"/><circle cx="14" cy="-82" r="5" fill="#fff"/><circle cx="36" cy="-68" r="5" fill="#fbcfe8"/></g>
@@ -53,6 +55,7 @@
     <div class="htop">
       <p class="eyebrow up" style="--i:0"><b></b>Trivox Solutions</p>
       <h1 class="up" style="--i:1"><span class="h1l">Web Development</span><span class="h1l">&amp; SEO Agency</span><span class="h1l">built to <span class="rot" id="rot">rank</span></span></h1>
+      <p class="term up" style="--i:2" aria-hidden="true"><span class="pr">$</span><span id="tt"></span><i class="cur"></i></p>
       <ul class="trust up" style="--i:2"><li><b>4.9/5</b> client rating</li><li><b>120+</b> projects</li><li><b>2 to 6 weeks</b> to launch</li></ul>
     </div>
     <div class="hbot">
@@ -223,5 +226,6 @@
 <div class="wrap fbt"><span>© 2025 Trivox Solutions. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/hero-tech.js" defer></script>
 </body>
 </html>

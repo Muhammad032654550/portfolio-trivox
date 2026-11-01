@@ -6,6 +6,7 @@ Folder
   index.html            the page (all text and SEO tags)
   css/style.css         all styling
   js/main.js            all animations and interactions
+  js/hero-tech.js       hero tech-line canvas animation (traces, pulses, scan, touch signals)
   assets/logo.webp      hero logo (optimized)
   assets/logo-sm.webp   nav and footer logo
   assets/favicon.png    browser tab icon
