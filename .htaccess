@@ -1,0 +1,5 @@
+# Makes sure the sitemap is served as XML (Hostinger / Apache)
+AddType application/xml .xml
+<Files "sitemap.xml">
+  Header set Content-Type "application/xml; charset=utf-8"
+</Files>
